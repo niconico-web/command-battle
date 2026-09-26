@@ -6,20 +6,49 @@ const eatk=document.getElementById("eatk");
 const edef=document.getElementById("edef");
 const attack=document.getElementById("attack");
 const deffence=document.getElementById("deffence");
+const monsterSelect=document.getElementById("monster");
 const player={
     name:"player",
     hp:100,
     atk:50,
     def:50
 };
-const enemy={...player};
-enemy.name="訓練用人形"
-enemy.hp=100;
-enemy.atk=50;
-enemy.def=50;
-ehp.textContent="hp:"+enemy.hp;
-eatk.textContent="atk:"+enemy.atk;
-edef.textContent="def:"+enemy.def;
+const slime={
+    name:"slime",
+    hp:50,
+    atk:25,
+    def:25
+}
+const golem={
+    name:"slime",
+    hp:50,
+    atk:25,
+    def:25
+}
+const dragon={
+    name:"slime",
+    hp:50,
+    atk:25,
+    def:25
+}
+if(monsterSelect.value=slime)
+{
+    ehp.textContent="hp:"+slime.hp;
+    eatk.textContent="atk:"+slime.atk;
+    edef.textContent="def:"+slime.def;
+}
+if(monsterSelect.value=golem)
+{
+    ehp.textContent="hp:"+golem.hp;
+    eatk.textContent="atk:"+golem.atk;
+    edef.textContent="def:"+golem.def;
+}
+if(monsterSelect.value=dragon)
+{
+    ehp.textContent="hp:"+dragon.hp;
+    eatk.textContent="atk:"+dragon.atk;
+    edef.textContent="def:"+dragon.def;
+}
 hp.textContent="hp:"+player.hp;
 atk.textContent="atk:"+player.atk;
 def.textContent="def:"+player.def;
