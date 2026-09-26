@@ -6,53 +6,36 @@ const eatk=document.getElementById("eatk");
 const edef=document.getElementById("edef");
 const attack=document.getElementById("attack");
 const deffence=document.getElementById("deffence");
-const monsterSelect=document.getElementById("monster");
 const player={
     name:"player",
     hp:100,
     atk:50,
     def:50
 };
-const slime={
-    name:"slime",
-    hp:50,
-    atk:25,
-    def:25
-};
-const stolen={
-    name:"slime",
-    hp:100,
-    atk:50,
-    def:30
-};
-const golem={
-    name:"slime",
-    hp:150,
-    atk:100,
-    def:50
-};
-const dragon={
-    name:"slime",
-    hp:200,
-    atk:150,
-    def:100
-};
-const enemy={};
-if(monsterSelect.value=slime)
+const slime = { name: "slime", hp: 50, atk: 25, def: 25 };
+const stolen = { name: "stolen", hp: 100, atk: 50, def: 30 };
+const golem = { name: "golem", hp: 150, atk: 100, def: 50 };
+const dragon = { name: "dragon", hp: 200, atk: 150, def: 100 };
+
+const monster=document.getElementById("monster")
+
+
+
+if(monsterSelect.value==slime)
 {
-    enemy={...slime};
+    const enemy={...slime};
 }
-if(monsterSelect.value=stolen)
+if(monsterSelect.value==stolen)
 {
-    enemy={...stolen}
+    const enemy={...stolen};
 }
-if(monsterSelect.value=golem)
+if(monsterSelect.value==golem)
 {
-    enemy={...golem}
+    const enemy={...golem};
 }
-if(monsterSelect.value=dragon)
+if(monsterSelect.value==dragon)
 {
-    enemy={...dragon}
+    const enemy={...dragon};
 }
 hp.textContent="hp:"+player.hp;
 atk.textContent="atk:"+player.atk;
