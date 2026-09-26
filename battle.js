@@ -18,40 +18,48 @@ const slime={
     hp:50,
     atk:25,
     def:25
-}
+};
+const stolen={
+    name:"slime",
+    hp:100,
+    atk:50,
+    def:30
+};
 const golem={
     name:"slime",
-    hp:50,
-    atk:25,
-    def:25
-}
+    hp:150,
+    atk:100,
+    def:50
+};
 const dragon={
     name:"slime",
-    hp:50,
-    atk:25,
-    def:25
-}
+    hp:200,
+    atk:150,
+    def:100
+};
+const enemy={};
 if(monsterSelect.value=slime)
 {
-    ehp.textContent="hp:"+slime.hp;
-    eatk.textContent="atk:"+slime.atk;
-    edef.textContent="def:"+slime.def;
+    enemy={...slime};
+}
+if(monsterSelect.value=stolen)
+{
+    enemy={...stolen}
 }
 if(monsterSelect.value=golem)
 {
-    ehp.textContent="hp:"+golem.hp;
-    eatk.textContent="atk:"+golem.atk;
-    edef.textContent="def:"+golem.def;
+    enemy={...golem}
 }
 if(monsterSelect.value=dragon)
 {
-    ehp.textContent="hp:"+dragon.hp;
-    eatk.textContent="atk:"+dragon.atk;
-    edef.textContent="def:"+dragon.def;
+    enemy={...dragon}
 }
 hp.textContent="hp:"+player.hp;
 atk.textContent="atk:"+player.atk;
 def.textContent="def:"+player.def;
+ehp.textContent="hp:"+enemy.hp;
+eatk.textContent="atk:"+enemy.atk;
+edef.textContent="def:"+enemy.def;
 
 attack.addEventListener("click",function () {
     enemy.hp-=player.atk/2;
